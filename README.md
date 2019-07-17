@@ -4,10 +4,6 @@ This repository contains the core smart contract code for DLLR. This is a high l
 familiarity with the basic economic mechanics as described in the
 whitepaper.
 
-## Additional Documentation
-
-`dss` is also documented in the [wiki](https://github.com/makerdao/dss/wiki) and in [DEVELOPING.md](https://github.com/makerdao/dss/blob/master/DEVELOPING.md)
-
 ## Design Considerations
 
 - Token agnostic
