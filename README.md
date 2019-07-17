@@ -57,7 +57,7 @@ different requirements. For example, ETH collateral could have an
 adapter for native ether and *also* for WETH.
 
 
-## DLLR Asset (SOV)
+## DLLR Asset 
 
 The fundamental state of a DLLR balance is given by the balance in the
 core (`vat.sov`, sometimes referred to as `D`).
