@@ -1,6 +1,6 @@
 # Multi Collateral 
 
-This repository contains the core smart contract code for Sovcoin. This is a high level description of the system, assuming
+This repository contains the core smart contract code for DLLR. This is a high level description of the system, assuming
 familiarity with the basic economic mechanics as described in the
 whitepaper.
 
@@ -30,13 +30,13 @@ whitepaper.
 
 ## Collateral, Adapters and Wrappers
 
-Collateral is the foundation of Sovcoin and Sovcoin creation is not possible
+Collateral is the foundation of DLLR and DLLR creation is not possible
 without it. There are many potential candidates for collateral, whether
 native ether, ERC20 tokens, other fungible token standards like ERC777,
 non-fungible tokens, or any number of other financial instruments.
 
 Token wrappers are one solution to the need to standardise collateral
-behaviour in Sovcoin. Inconsistent decimals and transfer semantics are
+behaviour in DLLR. Inconsistent decimals and transfer semantics are
 reasons for wrapping. For example, the WETH token is an ERC20 wrapper
 around native ether.
 
@@ -57,23 +57,23 @@ different requirements. For example, ETH collateral could have an
 adapter for native ether and *also* for WETH.
 
 
-## The Sovcoin Asset (SOV)
+## DLLR Asset (SOV)
 
-The fundamental state of a SOV balance is given by the balance in the
+The fundamental state of a DLLR balance is given by the balance in the
 core (`vat.sov`, sometimes referred to as `D`).
 
 Given this, there are a number of ways to implement the SOV that is used
 outside of the system, with different trade offs.
 
-*Fundamentally, "SOV" is any token that is directly fungible with the
+*Fundamentally, "DLLR" is any token that is directly fungible with the
 core.*
 
-In the Kovan deployment, "SOV" is represented by an ERC20 DSToken.
+In the Kovan deployment, "DLLR" is represented by an ERC20 DSToken.
 After interacting with CDPs and auctions, users must `exit` from the
 system to gain a balance of this token, which can then be used in Oasis
 etc.
 
-It is possible to have multiple fungible SOV tokens, allowing for the
+It is possible to have multiple fungible DLLR tokens, allowing for the
 adoption of new token standards. This needs careful consideration from a
 UX perspective, with the notion of a canonical token address becoming
 increasingly restrictive. In the future, cross-chain communication and
@@ -85,12 +85,12 @@ Hub.
 
 ## Price Feeds
 
-Price feeds are a crucial part of the SOV system. The code here assumes
+Price feeds are a crucial part of the DLLR system. The code here assumes
 that there are working price feeds and that their values are being
 pushed to the contracts.
 
 Specifically, the price that is required is the highest acceptable
-quantity of CDP SOV debt per unit of collateral.
+quantity of CDP DLLR debt per unit of collateral.
 
 
 ## Liquidation and Auctions
